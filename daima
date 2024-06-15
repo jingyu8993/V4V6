@@ -1,0 +1,22 @@
+// MainActivity.java
+public class MainActivity extends AppCompatActivity {
+    private static final String DEFAULT_LIVE_SOURCE_URL = "https://07751000.github.io/001github.io/DY.txt";
+    private EditText sourceUrlInput;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        EditText sourceNameInput = findViewById(R.id.input_sourceName);
+        sourceUrlInput = findViewById(R.id.input_source_url);
+        Button confirmButton = findViewById(R.id.inputSubmit);
+
+        // 设置默认的直播源URL
+        sourceUrlInput.setText(DEFAULT_LIVE_SOURCE_URL);
+
+        // 确认按钮的点击事件处理
+        confirmButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String sourceName = sourceNameInput.getText
